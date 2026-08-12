@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cake &amp; Bake, pasticceria e caffetteria a Selargius e Quartucciu</title>
+<meta name="description" content="Pasticceria e caffetteria Cake &amp; Bake: paste, torte su ordinazione, crostate, lievitati e salato preparati nel laboratorio. Due negozi, a Selargius e a Quartucciu.">
+<link rel="canonical" href="https://cake-bake.pages.dev/">
+<meta name="theme-color" content="#7AAC86">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Cake &amp; Bake">
+<meta property="og:title" content="Cake &amp; Bake, pasticceria e caffetteria">
+<meta property="og:description" content="Paste, torte su ordinazione, crostate e lievitati fatti nel laboratorio. Due negozi, a Selargius e a Quartucciu.">
+<meta property="og:url" content="https://cake-bake.pages.dev/">
+<meta property="og:image" content="https://cake-bake.pages.dev/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vassoi di paste mignon nella vetrina di Cake &amp; Bake">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cake &amp; Bake, pasticceria e caffetteria">
+<meta name="twitter:description" content="Paste, torte su ordinazione, crostate e lievitati fatti nel laboratorio. Selargius e Quartucciu.">
+<meta name="twitter:image" content="https://cake-bake.pages.dev/images/og-image.jpg">
+<script>document.documentElement.className+=' js';</script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --crema:#FEF4EA;
+  --panna:#FFFBF6;
+  --bianco:#FFFFFF;
+  --marrone:#6F4618;
+  --marrone-scuro:#5A3813;
+  --testo:#5F4A33;
+  --fucsia:#E40981;
+  --fucsia-testo:#B80668;
+  --salvia:#7AAC86;
+  --salvia-chiara:#DCEBE0;
+  --salvia-scura:#4E7A5C;
+  --bordo:rgba(122,172,134,.34);
+  --ombra:0 10px 30px rgba(111,70,24,.09);
+  --ombra-alta:0 20px 48px rgba(111,70,24,.14);
+  --raggio:20px;
+  --raggio-p:12px;
+  --sp:clamp(4rem,8vw,7rem);
+  --colonna:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--crema);color:var(--testo);
+  font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-weight:300;font-size:1.02rem;line-height:1.72;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+/* senza height:auto l'attributo height dell'HTML vale come altezza CSS,
+   aspect-ratio viene ignorato e object-fit ritaglia una fetta verticale */
+a{color:var(--fucsia-testo);text-decoration-thickness:1px;text-underline-offset:3px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--marrone);font-weight:600;line-height:1.14;margin:0}
+h1{font-size:clamp(2.9rem,7.5vw,5.2rem)}
+h2{font-size:clamp(2.1rem,4.6vw,3.3rem)}
+h3{font-size:1.32rem}
+p{margin:0 0 1.05rem}
+:focus-visible{outline:3px solid var(--fucsia);outline-offset:3px;border-radius:6px}
+.contenitore{width:min(100% - 2.6rem,var(--colonna));margin-inline:auto}
+.salta{position:absolute;left:-9999px}
+.salta:focus{left:1rem;top:1rem;z-index:200;background:var(--marrone);color:var(--crema);padding:.7rem 1.1rem;border-radius:10px;position:fixed}
+
+/* ---------- testata ---------- */
+.testata{
+  position:sticky;top:0;z-index:100;
+  background:rgba(254,244,234,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s;
+}
+.testata.staccata{border-bottom-color:var(--bordo);box-shadow:0 6px 22px rgba(111,70,24,.07)}
+.barra{display:flex;align-items:center;gap:1.2rem;padding:.62rem 0;min-height:64px}
+.marchio{display:flex;align-items:center;gap:.66rem;text-decoration:none;flex-shrink:0}
+.marchio img{width:46px;height:46px}
+.marchio b{
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.42rem;font-weight:600;
+  color:var(--marrone);letter-spacing:.01em;line-height:1;white-space:nowrap;
+}
+.marchio-testo{display:block}
+.marchio-testo em{display:block;font-family:'Poppins',sans-serif;font-size:.58rem;font-weight:400;
+  font-style:normal;letter-spacing:.19em;text-transform:uppercase;color:var(--salvia-scura);margin-top:.18rem}
+.menu{margin-left:auto;display:flex;align-items:center;gap:.35rem}
+.menu a{
+  font-size:.87rem;font-weight:400;color:var(--marrone);text-decoration:none;
+  padding:.5rem .72rem;border-radius:99px;transition:background .2s,color .2s;
+}
+.menu a:hover{background:var(--salvia-chiara)}
+.chiama,.menu a.chiama{
+  display:inline-flex;align-items:center;gap:.44rem;background:var(--fucsia);color:#fff;
+  padding:.62rem 1.15rem;border-radius:99px;font-size:.87rem;font-weight:500;text-decoration:none;
+  box-shadow:0 6px 16px rgba(228,9,129,.26);transition:transform .2s,box-shadow .2s,background .2s;
+  white-space:nowrap;
+}
+.chiama:hover,.menu a.chiama:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(228,9,129,.34);background:#cf0876;color:#fff}
+.chiama svg{width:16px;height:16px;flex-shrink:0}
+.apri-menu{display:none;margin-left:auto;background:none;border:1.5px solid var(--bordo);border-radius:12px;
+  padding:.5rem .6rem;cursor:pointer;color:var(--marrone)}
+.apri-menu svg{width:22px;height:22px;display:block}
+
+/* ---------- apertura ---------- */
+.apertura{position:relative;padding:clamp(3.4rem,8vw,6.4rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+.apertura::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(closest-side at 12% 18%,rgba(122,172,134,.20),transparent 70%),
+    radial-gradient(closest-side at 88% 8%,rgba(228,9,129,.09),transparent 70%);
+}
+.apertura .contenitore{position:relative;z-index:1;display:grid;gap:clamp(2.4rem,5vw,4rem);
+  grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.apertura .contenitore{grid-template-columns:1.02fr 1fr}}
+.occhiello{
+  display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--salvia-scura);font-weight:500;margin-bottom:1.15rem;
+}
+.occhiello::before{content:"";width:34px;height:1px;background:var(--salvia)}
+.apertura h1{margin-bottom:.5rem}
+.apertura h1 em{font-style:italic;font-weight:500;color:var(--fucsia-testo)}
+.sottotitolo{font-size:clamp(1.06rem,2vw,1.3rem);font-weight:300;color:var(--marrone);
+  max-width:30ch;margin-bottom:1.5rem}
+.apertura p.testo{max-width:48ch}
+.bottoni{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.9rem}
+.bottone{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.86rem 1.6rem;border-radius:99px;
+  font-size:.93rem;font-weight:500;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.bottone svg{width:17px;height:17px;flex-shrink:0}
+.bottone-pieno{background:var(--fucsia);color:#fff;box-shadow:0 8px 20px rgba(228,9,129,.26)}
+.bottone-pieno:hover{transform:translateY(-2px);box-shadow:0 13px 28px rgba(228,9,129,.34);background:#cf0876}
+.bottone-vuoto{background:transparent;color:var(--marrone);border:1.5px solid var(--bordo)}
+.bottone-vuoto:hover{transform:translateY(-2px);background:var(--salvia-chiara);border-color:var(--salvia)}
+.foto-apertura{position:relative}
+.foto-apertura img{
+  width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--raggio);
+  box-shadow:var(--ombra-alta);
+}
+.bollo{
+  position:absolute;right:-14px;bottom:-26px;width:118px;height:118px;
+  background:var(--panna);border-radius:50%;display:grid;place-items:center;
+  box-shadow:0 12px 30px rgba(111,70,24,.16);padding:12px;
+}
+.bollo img{width:100%;height:100%}
+@media(max-width:899px){.bollo{width:92px;height:92px;right:-6px;bottom:-20px}}
+
+/* ---------- nastro ---------- */
+.nastro{background:var(--marrone);color:var(--crema);padding:1.5rem 0}
+.nastro ul{list-style:none;margin:0;padding:0;display:grid;gap:1rem;grid-template-columns:1fr;
+  text-align:center}
+@media(min-width:760px){.nastro ul{grid-template-columns:repeat(3,1fr)}}
+.nastro li{display:flex;align-items:center;justify-content:center;gap:.6rem;font-size:.9rem;font-weight:300}
+.nastro svg{width:20px;height:20px;color:var(--salvia);flex-shrink:0}
+.nastro b{font-weight:500}
+
+/* ---------- sezioni ---------- */
+.sezione{padding:var(--sp) 0}
+.sezione-panna{background:var(--panna)}
+.intestazione{max-width:62ch;margin-bottom:clamp(2.4rem,4vw,3.4rem)}
+.intestazione.centrata{margin-inline:auto;text-align:center}
+.intestazione h2{margin-bottom:.85rem}
+.intestazione p{font-size:1.06rem}
+.fregio{display:flex;align-items:center;gap:.5rem;justify-content:flex-start;margin-bottom:1.1rem}
+.intestazione.centrata .fregio{justify-content:center}
+.fregio i{width:7px;height:7px;border-radius:50%;background:var(--salvia);display:block}
+.fregio i:nth-child(2){background:var(--fucsia)}
+
+/* racconto */
+.racconto{display:grid;gap:clamp(2.2rem,5vw,4rem);grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.racconto{grid-template-columns:1fr 1fr}}
+.racconto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--raggio);box-shadow:var(--ombra)}
+.racconto .testi p:last-child{margin-bottom:0}
+.citazione{
+  border-left:3px solid var(--salvia);padding:.15rem 0 .15rem 1.2rem;margin:1.7rem 0 0;
+  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.42rem;font-style:italic;
+  color:var(--marrone);line-height:1.45;
+}
+
+/* specialita */
+.griglia{display:grid;gap:1.15rem;grid-template-columns:1fr}
+@media(min-width:640px){.griglia{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.griglia{grid-template-columns:repeat(3,1fr)}}
+.scheda{
+  background:var(--crema);border:1px solid var(--bordo);border-radius:var(--raggio);
+  padding:1.9rem 1.7rem;transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.sezione-panna .scheda{background:var(--panna)}
+.scheda:hover{transform:translateY(-4px);box-shadow:var(--ombra);border-color:var(--salvia)}
+.icona{
+  width:50px;height:50px;border-radius:15px;background:var(--salvia-chiara);
+  display:grid;place-items:center;margin-bottom:1.1rem;
+}
+.icona svg{width:25px;height:25px;color:var(--salvia-scura)}
+.scheda h3{margin-bottom:.5rem}
+.scheda p{font-size:.95rem;margin-bottom:0}
+
+/* torte */
+.torte{position:relative}
+.trittico{display:grid;gap:1.15rem;grid-template-columns:1fr;margin-bottom:2.6rem}
+@media(min-width:700px){.trittico{grid-template-columns:repeat(3,1fr)}}
+.trittico figure{margin:0;position:relative;border-radius:var(--raggio);overflow:hidden;box-shadow:var(--ombra)}
+.trittico img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
+.trittico figure:hover img{transform:scale(1.04)}
+.trittico figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.2rem .95rem;
+  background:linear-gradient(to top,rgba(58,34,10,.82),transparent);
+  color:#fff;font-size:.92rem;font-weight:400;
+}
+.riquadro-ordine{
+  background:var(--marrone);color:var(--crema);border-radius:var(--raggio);
+  padding:clamp(2rem,4vw,3rem);display:grid;gap:1.6rem;align-items:center;grid-template-columns:1fr;
+}
+@media(min-width:840px){.riquadro-ordine{grid-template-columns:1.5fr auto}}
+.riquadro-ordine h3{color:var(--crema);font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:.7rem}
+.riquadro-ordine p{margin-bottom:0;font-size:.98rem;opacity:.92}
+.riquadro-ordine .bottone-pieno{box-shadow:0 8px 20px rgba(0,0,0,.24)}
+
+/* galleria */
+.galleria{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media(min-width:820px){.galleria{grid-template-columns:repeat(4,1fr)}}
+.galleria figure{margin:0;border-radius:var(--raggio-p);overflow:hidden;box-shadow:var(--ombra)}
+.galleria img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
+.galleria figure:hover img{transform:scale(1.05)}
+.banda{margin-top:1rem;border-radius:var(--raggio-p);overflow:hidden;box-shadow:var(--ombra)}
+.banda img{width:100%;aspect-ratio:21/9;object-fit:cover}
+
+/* sedi */
+.sedi{display:grid;gap:1.6rem;grid-template-columns:1fr}
+@media(min-width:900px){.sedi{grid-template-columns:repeat(2,1fr)}}
+.sede{
+  background:var(--panna);border:1px solid var(--bordo);border-radius:var(--raggio);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.sezione-panna .sede{background:var(--crema)}
+.sede .mappa{display:block;position:relative}
+.sede .mappa img{width:100%;aspect-ratio:8/5;object-fit:cover}
+.mappa-etichetta{
+  position:absolute;left:.8rem;bottom:.8rem;display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(255,251,246,.95);padding:.42rem .8rem;border-radius:99px;
+  font-size:.78rem;font-weight:500;color:var(--marrone);box-shadow:0 4px 12px rgba(111,70,24,.14);
+}
+.mappa-etichetta svg{width:15px;height:15px;color:var(--fucsia)}
+.sede-corpo{padding:1.8rem;display:flex;flex-direction:column;gap:1.1rem;flex:1}
+.sede h3{font-size:1.55rem}
+.sede-riga{display:flex;gap:.75rem;align-items:flex-start;font-size:.94rem}
+.sede-riga svg{width:19px;height:19px;color:var(--salvia-scura);flex-shrink:0;margin-top:.25rem}
+.sede-riga a{color:var(--marrone);text-decoration:none;font-weight:400}
+.sede-riga a:hover{color:var(--fucsia-testo);text-decoration:underline}
+.orari{list-style:none;margin:0;padding:0;font-size:.92rem}
+.orari li{display:flex;justify-content:space-between;gap:1rem;padding:.34rem 0;border-bottom:1px dashed var(--bordo)}
+.orari li:last-child{border-bottom:0}
+.orari b{font-weight:500;color:var(--marrone)}
+.nota{font-size:.82rem;color:var(--salvia-scura);margin:0}
+.sede .bottone{align-self:flex-start;margin-top:auto}
+
+/* chiusura */
+.chiusura{text-align:center;background:var(--salvia-chiara);position:relative;overflow:hidden}
+.chiusura::after{
+  content:"";position:absolute;left:50%;top:-120px;width:420px;height:420px;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(228,9,129,.10),transparent 70%);pointer-events:none;
+}
+.chiusura .contenitore{position:relative;z-index:1}
+.chiusura h2{margin-bottom:1rem}
+.chiusura p{max-width:56ch;margin-inline:auto}
+.chiusura .bottoni{justify-content:center}
+
+/* piede */
+.piede{background:var(--marrone-scuro);color:rgba(254,244,234,.82);padding:3.4rem 0 2rem;font-size:.9rem}
+.piede-griglia{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:760px){.piede-griglia{grid-template-columns:1.4fr 1fr 1fr}}
+.piede h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:var(--crema);
+  margin:0 0 .8rem;font-weight:600}
+.piede a{color:rgba(254,244,234,.82);text-decoration:none}
+.piede a:hover{color:#fff;text-decoration:underline}
+.piede ul{list-style:none;margin:0;padding:0;display:grid;gap:.42rem}
+.piede-marchio{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+.piede-marchio img{width:52px;height:52px}
+.piede-marchio b{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;color:var(--crema);font-weight:600}
+.coda{margin-top:2.6rem;padding-top:1.3rem;border-top:1px solid rgba(254,244,234,.16);
+  display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between;font-size:.8rem}
+
+/* comparsa allo scorrimento, solo con JS attivo */
+.js .comparsa{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .comparsa.vista{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .comparsa{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+@media(max-width:360px){
+  /* solo sugli schermi molto stretti la riga della testata non ci sta */
+  .marchio-testo em{display:none}
+  .marchio b{font-size:1.28rem}
+  .marchio img{width:40px;height:40px}
+  .contenitore{width:min(100% - 2rem,var(--colonna))}
+}
+@media(max-width:860px){
+  .menu{
+    position:fixed;inset:64px 0 auto;background:var(--crema);flex-direction:column;
+    align-items:stretch;gap:0;padding:1rem 1.3rem 1.6rem;border-bottom:1px solid var(--bordo);
+    box-shadow:0 14px 30px rgba(111,70,24,.12);display:none;
+  }
+  .menu.aperto{display:flex}
+  .menu a{padding:.8rem .4rem;border-bottom:1px solid var(--bordo);border-radius:0}
+  .menu a:hover{background:transparent;color:var(--fucsia-testo)}
+  .menu a.chiama,.menu a.chiama:hover{color:#fff}
+  .menu .chiama{margin-top:1rem;justify-content:center;border-bottom:0}
+  .apri-menu{display:block}
+}
+</style>
+</head>
+<body>
+<a class="salta" href="#principale">Salta al contenuto</a>
+
+<header class="testata" id="testata">
+  <div class="contenitore barra">
+    <a class="marchio" href="#principale" aria-label="Cake e Bake, pasticceria e caffetteria">
+      <img src="images/marchio.png" alt="" width="46" height="46">
+      <span class="marchio-testo"><b>Cake &amp; Bake</b><em>Pasticceria e caffetteria</em></span>
+    </a>
+    <button class="apri-menu" id="apri-menu" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu di navigazione">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="Navigazione principale">
+      <a href="#laboratorio">Il laboratorio</a>
+      <a href="#specialita">Cosa trovi</a>
+      <a href="#torte">Torte</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#sedi">Dove siamo</a>
+      <a class="chiama" href="tel:+3907015259121">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        070 1525 9121
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="principale">
+
+  <!-- ======== apertura ======== -->
+  <section class="apertura">
+    <div class="contenitore">
+      <div>
+        <p class="occhiello">Selargius e Quartucciu</p>
+        <h1>Cake <em>&amp;</em> Bake</h1>
+        <p class="sottotitolo">Pasticceria e caffetteria, dal mattino presto.</p>
+        <p class="testo">Paste mignon, torte su ordinazione, crostate di frutta, lievitati e salato: tutto preparato nel nostro laboratorio e portato in vetrina ogni giorno. Due negozi a pochi minuti l'uno dall'altro, alle porte di Cagliari.</p>
+        <div class="bottoni">
+          <a class="bottone bottone-pieno" href="#torte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M8.5 5.5 12 2l3.5 3.5"/><path d="M4 13c1.5 0 1.5 1.5 3 1.5S8.5 13 10 13s1.5 1.5 3 1.5S14.5 13 16 13s1.5 1.5 3 1.5"/><path d="M5 13V9.5A2.5 2.5 0 0 1 7.5 7h9A2.5 2.5 0 0 1 19 9.5V13"/><path d="M3 17.5h18a0 0 0 0 1 0 0v1.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1.5Z"/></svg>
+            Ordina una torta
+          </a>
+          <a class="bottone bottone-vuoto" href="#sedi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            I due negozi
+          </a>
+        </div>
+      </div>
+      <div class="foto-apertura">
+        <img src="images/hero-vetrina.webp" alt="Vassoi di paste mignon, tartellette e bignè nella vetrina della pasticceria" width="1560" height="975" fetchpriority="high">
+        <div class="bollo"><img src="images/marchio.png" alt="Marchio Cake e Bake" width="118" height="118"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== nastro ======== -->
+  <div class="nastro">
+    <div class="contenitore">
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2v6a6 6 0 0 0 12 0V2"/><path d="M9 22h6"/><path d="M12 14v8"/></svg>
+          <span><b>Laboratorio proprio</b>, produzione quotidiana</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span><b>Due negozi</b>, Selargius e Quartucciu</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
+          <span><b>Asporto e consegna</b> su ordinazione</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======== laboratorio ======== -->
+  <section class="sezione" id="laboratorio">
+    <div class="contenitore racconto comparsa">
+      <div class="testi">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Quello che vedi in vetrina<br>nasce di là dal banco</h2>
+        <p>Cake &amp; Bake è una pasticceria con caffetteria: si entra la mattina presto per un cornetto e un cappuccino, si torna nel pomeriggio per un vassoio di paste, e si passa a ritirare la torta il giorno della festa.</p>
+        <p>Paste mignon, bignè, tartellette, crostate di frutta, biscotti decorati a mano e lievitati delle feste escono dallo stesso laboratorio. È il motivo per cui la vetrina cambia con le stagioni e con le ricorrenze, invece di restare sempre uguale.</p>
+        <p class="citazione">Tante leccornie, ambiente accogliente e amichevole.<br><span style="font-family:'Poppins',sans-serif;font-size:.8rem;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--salvia-scura)">da una recensione dei clienti</span></p>
+      </div>
+      <img src="images/vetrina-mignon.webp" alt="Paste mignon al cocco, al pistacchio e al tiramisù allineate in vetrina" width="1000" height="1250" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ======== specialita ======== -->
+  <section class="sezione sezione-panna" id="specialita">
+    <div class="contenitore">
+      <div class="intestazione centrata comparsa">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Cosa trovi da noi</h2>
+        <p>Dolce e salato, dalla colazione al vassoio per la domenica.</p>
+      </div>
+      <div class="griglia">
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h14v4a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-4Z"/><path d="M17 12h1.6a2.4 2.4 0 0 1 0 4.8H17"/><path d="M6 3v2.5M10 3v2.5M14 3v2.5"/></svg></div>
+          <h3>Colazione al banco</h3>
+          <p>Cornetti, brioche e paste da colazione con caffè e cappuccino, dalle sette del mattino.</p>
+        </article>
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4"/><path d="M5 12h14a0 0 0 0 1 0 0v2a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5v-2Z"/><path d="M12 5v3"/><circle cx="12" cy="4" r="1.4"/><path d="M4 21h16"/></svg></div>
+          <h3>Paste e mignon</h3>
+          <p>Bignè, tartellette, mini torte al cocco, al pistacchio e al tiramisù. Si compongono a vassoio.</p>
+        </article>
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="M4 14c1.4 0 1.4 1.4 2.8 1.4S8.2 14 9.6 14s1.4 1.4 2.8 1.4S13.8 14 15.2 14s1.4 1.4 2.8 1.4S19.4 14 20 14"/><path d="M5 14v-3.2A2.8 2.8 0 0 1 7.8 8h8.4A2.8 2.8 0 0 1 19 10.8V14"/><path d="M4 18h16v1.6A1.4 1.4 0 0 1 18.6 21H5.4A1.4 1.4 0 0 1 4 19.6V18Z"/></svg></div>
+          <h3>Torte su ordinazione</h3>
+          <p>Compleanni, battesimi, anniversari. Decorate a mano, con la scritta che vuoi tu.</p>
+        </article>
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.4"/><circle cx="10" cy="10.4" r="1"/><circle cx="14.2" cy="11.4" r="1"/><circle cx="11.6" cy="14" r="1"/></svg></div>
+          <h3>Crostate di frutta</h3>
+          <p>Frutta fresca tagliata al momento su crema pasticciera e pasta frolla.</p>
+        </article>
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 12 4l9 13.5Z"/><path d="M6.8 13h10.4"/><circle cx="10.4" cy="15.4" r=".9"/><circle cx="13.6" cy="15.4" r=".9"/></svg></div>
+          <h3>Il salato</h3>
+          <p>Pizzette, panini e tramezzini preparati in casa, per la pausa o per il buffet.</p>
+        </article>
+        <article class="scheda comparsa">
+          <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7S10.5 3 8 3a2.5 2.5 0 0 0 0 5"/><path d="M12 7s1.5-4 4-4a2.5 2.5 0 0 1 0 5"/></svg></div>
+          <h3>Le ricorrenze</h3>
+          <p>Colombe e panettoni del laboratorio, biscotti decorati e confezioni regalo per le feste.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== torte ======== -->
+  <section class="sezione torte" id="torte">
+    <div class="contenitore">
+      <div class="intestazione centrata comparsa">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Le torte su ordinazione</h2>
+        <p>Ci dici l'occasione, quante persone siete e cosa vi piace. Al resto pensiamo noi: farcitura, decorazione e la scritta sopra.</p>
+      </div>
+      <div class="trittico comparsa">
+        <figure>
+          <img src="images/torta-rose.webp" alt="Torta con rose di panna montata lilla e foglie verdi in pasta di zucchero" width="864" height="1080" loading="lazy">
+          <figcaption>Rose di panna, decorate a sac à poche</figcaption>
+        </figure>
+        <figure>
+          <img src="images/torta-auguri.webp" alt="Torta di compleanno con rose turchesi e rosa e la scritta Auguri in cioccolato" width="768" height="960" loading="lazy">
+          <figcaption>Con la scritta e i colori che scegli tu</figcaption>
+        </figure>
+        <figure>
+          <img src="images/crostata-frutta.webp" alt="Crostata ricoperta di frutta fresca a fette, accanto alla scatola della pasticceria" width="900" height="1125" loading="lazy">
+          <figcaption>Crostata di frutta fresca, pronta da ritirare</figcaption>
+        </figure>
+      </div>
+      <div class="riquadro-ordine comparsa">
+        <div>
+          <h3>Si ordina per telefono</h3>
+          <p>Chiamaci con qualche giorno di anticipo, soprattutto nel fine settimana e sotto le feste. Ti diciamo subito cosa possiamo fare e quando è pronta.</p>
+        </div>
+        <a class="bottone bottone-pieno" href="tel:+3907015259121">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Chiama Selargius
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== feste ======== -->
+  <section class="sezione sezione-panna" id="feste">
+    <div class="contenitore racconto comparsa">
+      <img src="images/pasqua-biscotti.webp" alt="Biscotti decorati a forma di coniglio, pulcino e uovo con glassa colorata" width="1000" height="1250" loading="lazy">
+      <div class="testi">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Le feste, un mese prima</h2>
+        <p>Sotto Natale e sotto Pasqua il laboratorio cambia passo. Escono le colombe e i panettoni, e la vetrina si riempie di biscotti decorati a mano uno per uno: conigli, pulcini, uova con la glassa colorata.</p>
+        <p>Le confezioni regalo sono pronte in negozio, con il nastro e il biglietto. Per le quantità grandi conviene ordinare in anticipo, perché nelle ultime settimane il laboratorio lavora già a pieno ritmo.</p>
+        <div class="bottoni">
+          <a class="bottone bottone-vuoto" href="#sedi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Vieni a vedere
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== galleria ======== -->
+  <section class="sezione" id="galleria">
+    <div class="contenitore">
+      <div class="intestazione centrata comparsa">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Dal banco</h2>
+        <p>Qualche giornata qualunque, fotografata così com'era.</p>
+      </div>
+      <div class="galleria comparsa">
+        <figure><img src="images/vetrina-mignon.webp" alt="Vassoi di paste mignon e bignè al cioccolato" width="1000" height="1250" loading="lazy"></figure>
+        <figure><img src="images/crostata-frutta.webp" alt="Crostata di frutta fresca con la scatola del negozio" width="900" height="1125" loading="lazy"></figure>
+        <figure><img src="images/pizzette.webp" alt="Pizzette con pomodoro e capperi pronte da infornare" width="648" height="810" loading="lazy"></figure>
+        <figure><img src="images/pasqua-colomba.webp" alt="Confezione di colomba classica e biscotti pasquali decorati" width="1000" height="1250" loading="lazy"></figure>
+      </div>
+      <div class="banda comparsa">
+        <img src="images/banda-torta.webp" alt="Particolare delle rose di panna montata su una torta decorata" width="1080" height="462" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== sedi ======== -->
+  <section class="sezione sezione-panna" id="sedi">
+    <div class="contenitore">
+      <div class="intestazione centrata comparsa">
+        <div class="fregio"><i></i><i></i><i></i></div>
+        <h2>Dove siamo</h2>
+        <p>Due negozi a poco più di un chilometro l'uno dall'altro, fra Selargius e Quartucciu.</p>
+      </div>
+      <div class="sedi">
+
+        <article class="sede comparsa">
+          <a class="mappa" href="https://www.openstreetmap.org/?mlat=39.254036&amp;mlon=9.164782#map=18/39.254036/9.164782" rel="noopener" aria-label="Apri su OpenStreetMap la mappa di Via Trieste 63 a Selargius">
+            <img src="images/mappa-selargius.webp" alt="Mappa di Selargius con il negozio segnato in Via Trieste, all'angolo con Via Firenze" width="1000" height="620" loading="lazy">
+            <span class="mappa-etichetta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apri la mappa
+            </span>
+          </a>
+          <div class="sede-corpo">
+            <h3>Selargius</h3>
+            <p class="sede-riga">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Trieste 63, angolo Via Firenze<br>09047 Selargius (CA)</span>
+            </p>
+            <p class="sede-riga">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <a href="tel:+3907015259121">070 1525 9121</a>
+            </p>
+            <div>
+              <ul class="orari">
+                <li><b>Lunedì</b><span>7:00 - 13:30</span></li>
+                <li><b>Da martedì a sabato</b><span>7:00 - 20:00</span></li>
+                <li><b>Domenica</b><span>7:00 - 13:30</span></li>
+              </ul>
+              <p class="nota">Nei giorni di festa gli orari possono cambiare: una telefonata toglie ogni dubbio.</p>
+            </div>
+            <a class="bottone bottone-vuoto" href="tel:+3907015259121">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              Chiama Selargius
+            </a>
+          </div>
+        </article>
+
+        <article class="sede comparsa">
+          <a class="mappa" href="https://www.openstreetmap.org/?mlat=39.252379&amp;mlon=9.172423#map=18/39.252379/9.172423" rel="noopener" aria-label="Apri su OpenStreetMap la mappa di Via Carlo Rosselli 51 a Quartucciu">
+            <img src="images/mappa-quartucciu.webp" alt="Mappa di Quartucciu con il negozio segnato in Via Carlo Rosselli" width="1000" height="620" loading="lazy">
+            <span class="mappa-etichetta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apri la mappa
+            </span>
+          </a>
+          <div class="sede-corpo">
+            <h3>Quartucciu</h3>
+            <p class="sede-riga">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Via Carlo Rosselli 51<br>09044 Quartucciu (CA)</span>
+            </p>
+            <p class="sede-riga">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <a href="tel:+390707568247">070 756 8247</a>
+            </p>
+            <div>
+              <p class="sede-riga">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg>
+                <span>Aperto dalla mattina presto. Per gli orari del giorno conviene una telefonata al negozio.</span>
+              </p>
+            </div>
+            <a class="bottone bottone-vuoto" href="tel:+390707568247">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              Chiama Quartucciu
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <p class="nota" style="margin-top:1.2rem;text-align:center">Mappe: dati OpenStreetMap, licenza ODbL. Si aprono in una pagina esterna.</p>
+    </div>
+  </section>
+
+  <!-- ======== chiusura ======== -->
+  <section class="sezione chiusura">
+    <div class="contenitore">
+      <div class="fregio" style="justify-content:center"><i></i><i></i><i></i></div>
+      <h2>Passa a trovarci</h2>
+      <p>Per un caffè al banco non serve avvisare. Per una torta, un vassoio di paste o un buffet, basta una telefonata con un po' di anticipo.</p>
+      <div class="bottoni">
+        <a class="bottone bottone-pieno" href="tel:+3907015259121">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          070 1525 9121
+        </a>
+        <a class="bottone bottone-vuoto" href="#sedi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Come arrivare
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="piede">
+  <div class="contenitore">
+    <div class="piede-griglia">
+      <div>
+        <div class="piede-marchio">
+          <img src="images/marchio.png" alt="" width="52" height="52">
+          <b>Cake &amp; Bake</b>
+        </div>
+        <p style="margin:0">Pasticceria e caffetteria.<br>Paste, torte su ordinazione, crostate, lievitati e salato preparati nel laboratorio.</p>
+      </div>
+      <div>
+        <h4>Selargius</h4>
+        <ul>
+          <li>Via Trieste 63<br>09047 Selargius (CA)</li>
+          <li><a href="tel:+3907015259121">070 1525 9121</a></li>
+          <li><a href="https://www.openstreetmap.org/?mlat=39.254036&amp;mlon=9.164782#map=18/39.254036/9.164782" rel="noopener">Apri la mappa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quartucciu</h4>
+        <ul>
+          <li>Via Carlo Rosselli 51<br>09044 Quartucciu (CA)</li>
+          <li><a href="tel:+390707568247">070 756 8247</a></li>
+          <li><a href="https://www.openstreetmap.org/?mlat=39.252379&amp;mlon=9.172423#map=18/39.252379/9.172423" rel="noopener">Apri la mappa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="coda">
+      <span>Cake &amp; Bake Soc. Coop.</span>
+      <span><a href="privacy.html">Informativa privacy</a> · Questo sito non usa cookie e non traccia i visitatori.</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Bakery",
+      "@id":"https://cake-bake.pages.dev/#selargius",
+      "name":"Cake & Bake Selargius",
+      "description":"Pasticceria e caffetteria: paste mignon, torte su ordinazione, crostate di frutta, lievitati e salato preparati nel laboratorio.",
+      "image":"https://cake-bake.pages.dev/images/og-image.jpg",
+      "url":"https://cake-bake.pages.dev/",
+      "telephone":"+3907015259121",
+      "servesCuisine":"Pasticceria",
+      "priceRange":"€€",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Via Trieste 63",
+        "addressLocality":"Selargius",
+        "addressRegion":"CA",
+        "postalCode":"09047",
+        "addressCountry":"IT"
+      },
+      "geo":{"@type":"GeoCoordinates","latitude":39.254036,"longitude":9.164782},
+      "openingHoursSpecification":[
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Sunday"],"opens":"07:00","closes":"13:30"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"20:00"}
+      ]
+    },
+    {
+      "@type":"Bakery",
+      "@id":"https://cake-bake.pages.dev/#quartucciu",
+      "name":"Cake & Bake Quartucciu",
+      "description":"Pasticceria e caffetteria: paste, torte su ordinazione e lievitati preparati nel laboratorio.",
+      "image":"https://cake-bake.pages.dev/images/og-image.jpg",
+      "url":"https://cake-bake.pages.dev/",
+      "telephone":"+390707568247",
+      "servesCuisine":"Pasticceria",
+      "priceRange":"€€",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Via Carlo Rosselli 51",
+        "addressLocality":"Quartucciu",
+        "addressRegion":"CA",
+        "postalCode":"09044",
+        "addressCountry":"IT"
+      },
+      "geo":{"@type":"GeoCoordinates","latitude":39.252379,"longitude":9.172423}
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var d=document, r=d.documentElement;
+  try{
+
+  /* menu su telefono */
+  var b=d.getElementById('apri-menu'), m=d.getElementById('menu');
+  b.addEventListener('click',function(){
+    var aperto=m.classList.toggle('aperto');
+    b.setAttribute('aria-expanded',aperto?'true':'false');
+    b.setAttribute('aria-label',aperto?'Chiudi il menu di navigazione':'Apri il menu di navigazione');
+  });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('aperto');b.setAttribute('aria-expanded','false');}
+  });
+  d.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&m.classList.contains('aperto')){m.classList.remove('aperto');b.setAttribute('aria-expanded','false');b.focus();}
+  });
+
+  /* testata staccata e comparsa allo scorrimento.
+     Niente IntersectionObserver: con lo scorrimento veloce salta elementi
+     e lascia sezioni vuote. Qui si controlla la posizione a ogni scorrimento. */
+  var testata=d.getElementById('testata');
+  var voci=[].slice.call(d.querySelectorAll('.comparsa'));
+  var inCoda=false;
+
+  function controlla(){
+    inCoda=false;
+    testata.classList.toggle('staccata', (window.pageYOffset||d.documentElement.scrollTop)>8);
+    var soglia=window.innerHeight*0.90;
+    for(var i=voci.length-1;i>=0;i--){
+      if(voci[i].getBoundingClientRect().top<soglia){
+        voci[i].classList.add('vista');
+        voci.splice(i,1);
+      }
+    }
+  }
+  function programma(){ if(!inCoda){inCoda=true;requestAnimationFrame(controlla);} }
+
+  window.addEventListener('scroll',programma,{passive:true});
+  window.addEventListener('resize',programma,{passive:true});
+  window.addEventListener('load',controlla);
+  window.addEventListener('hashchange',controlla);
+  window.addEventListener('pageshow',controlla);
+  controlla();
+
+  /* Lo scorrimento morbido e i salti a un'ancora (link diretto a #torte, tasto
+     indietro, ripristino della posizione) non fanno sempre scattare l'evento
+     scroll al momento giusto: una sezione puo' restare vuota. Per i primi
+     secondi si ricontrolla a intervalli e si smette appena e' tutto comparso. */
+  var battito=setInterval(function(){
+    controlla();
+    if(!voci.length) clearInterval(battito);
+  },200);
+  setTimeout(function(){
+    clearInterval(battito);
+    while(voci.length) voci.pop().classList.add('vista');
+  },8000);
+  }catch(e){
+    /* se qualcosa si rompe il sito resta leggibile: si toglie l'effetto e si mostra tutto */
+    r.className=r.className.replace(' js','');
+  }
+
+})();
+</script>
+</body>
+</html>
