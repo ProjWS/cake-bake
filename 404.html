@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagina non trovata | Cake &amp; Bake</title>
+<meta name="description" content="La pagina cercata non esiste. Torna alla pagina iniziale di Cake &amp; Bake, pasticceria e caffetteria a Selargius e Quartucciu.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#7AAC86">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{
+  --crema:#FEF4EA;
+  --panna:#FFFBF6;
+  --marrone:#6F4618;
+  --marrone-scuro:#5A3813;
+  --testo:#5F4A33;
+  --fucsia:#E40981;
+  --fucsia-testo:#B80668;
+  --salvia:#7AAC86;
+  --salvia-chiara:#DCEBE0;
+  --salvia-scura:#4E7A5C;
+  --bordo:rgba(122,172,134,.34);
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100svh;display:flex;flex-direction:column;
+  background:var(--crema);color:var(--testo);
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;font-size:1.0625rem;line-height:1.7;
+  font-weight:300}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--fucsia-testo)}
+:focus-visible{outline:3px solid var(--fucsia);outline-offset:3px;border-radius:8px}
+.contenitore{width:min(100% - 2.4rem,640px);margin-inline:auto}
+.testata{background:var(--panna);border-bottom:1px solid var(--bordo);padding:.9rem 0}
+.marchio{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:inherit;width:max-content}
+.marchio img{width:40px;height:40px;border-radius:50%}
+.marchio b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:1.22rem;color:var(--marrone);line-height:1.15;letter-spacing:.01em}
+.marchio em{display:block;font-style:normal;font-size:.72rem;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--salvia-scura)}
+main{flex:1;display:grid;place-items:center;padding:3.6rem 0 4.6rem;text-align:center}
+.numerone{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:.82;
+  font-size:clamp(5.5rem,24vw,10rem);color:var(--salvia);margin:0;letter-spacing:-.03em}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:clamp(1.6rem,5vw,2.35rem);color:var(--marrone);margin:.6rem 0 .9rem;letter-spacing:.01em}
+p{margin:0 0 1.1rem}
+.bottoni{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.7rem}
+.bottone{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;text-decoration:none;
+  font-weight:500;font-size:.97rem;padding:.8rem 1.4rem;border:2px solid transparent;min-height:48px}
+.bottone svg{width:18px;height:18px;flex:none}
+.b-pieno{background:var(--fucsia);color:#fff}
+.b-pieno:hover{background:var(--fucsia-testo);color:#fff}
+.b-vuoto{border-color:var(--bordo);color:var(--salvia-scura);background:var(--panna)}
+.b-vuoto:hover{border-color:var(--salvia);background:var(--salvia-chiara)}
+.piede{background:var(--marrone);color:rgba(254,244,234,.92);font-size:.88rem;
+  padding:1.7rem 0;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="testata">
+  <div class="contenitore">
+    <a class="marchio" href="/" aria-label="Cake e Bake, pagina iniziale">
+      <img src="/images/marchio.png" alt="" width="512" height="512">
+      <span><b>Cake &amp; Bake</b><em>Pasticceria e caffetteria</em></span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="contenitore">
+    <p class="numerone">404</p>
+    <h1>Questa pagina non esiste</h1>
+    <p>Il vassoio è vuoto: l'indirizzo che hai aperto non corrisponde a nessuna pagina del sito. Dalla pagina iniziale trovi il laboratorio, le torte su ordinazione e i due negozi.</p>
+    <div class="bottoni">
+      <a class="bottone b-pieno" href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/></svg>
+        <span>Pagina iniziale</span>
+      </a>
+      <a class="bottone b-vuoto" href="/#sedi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Dove siamo</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<div class="piede">
+  <div class="contenitore">Cake &amp; Bake &middot; Via Trieste 63, Selargius &middot; Via Carlo Rosselli 51, Quartucciu</div>
+</div>
+
+</body>
+</html>
